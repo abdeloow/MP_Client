@@ -1,0 +1,12 @@
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\bin\Debug\net8.0\MultipleHtppClient.Infrastructure.deps.json
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\bin\Debug\net8.0\MultipleHtppClient.Infrastructure.dll
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\bin\Debug\net8.0\MultipleHtppClient.Infrastructure.pdb
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\MultipleHtppClient.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\MultipleHtppClient.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\MultipleHtppClient.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\MultipleHtppClient.Infrastructure.AssemblyInfo.cs
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\MultipleHtppClient.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\MultipleHtppClient.Infrastructure.dll
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\refint\MultipleHtppClient.Infrastructure.dll
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\MultipleHtppClient.Infrastructure.pdb
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\ref\MultipleHtppClient.Infrastructure.dll
