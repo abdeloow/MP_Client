@@ -10,3 +10,4 @@ C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClien
 C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\refint\MultipleHtppClient.Infrastructure.dll
 C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\MultipleHtppClient.Infrastructure.pdb
 C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\ref\MultipleHtppClient.Infrastructure.dll
+C:\Users\dihba\Desktop\CodingGames\Multiple_Purpose_HTTPClient\MultipleHtppClient.Infrastructure\obj\Debug\net8.0\MultipleHtppClient.Infrastructure.sourcelink.json

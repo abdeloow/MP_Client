@@ -11,6 +11,10 @@ public class HttpClientService : IHttpClientService
     private readonly ILogger<HttpClientService> _logger;
     private readonly IEnumerable<IAuthenticationHandler> _authenticationHandlers;
     private readonly Configuration _configuration;
+    private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions
+    {
+        PropertyNameCaseInsensitive = true
+    };
     public HttpClientService(IHttpClientFactory httpClientFactory, ILogger<HttpClientService> logger, IEnumerable<IAuthenticationHandler> authenticationHandlers, IOptions<Configuration> configurtions)
     {
         _httpClientFactory = httpClientFactory;
@@ -31,10 +35,10 @@ public class HttpClientService : IHttpClientService
                     await ApplyAuthentication(client, apiConfig);
                     ApplyHeaders(client, apiConfig, apiRequest);
                     _logger.LogDebug("Sending {0} request to {1}: {2}", apiRequest.Method, apiRequest.ApiName, apiRequest.Endpoint);
-                    var response = await client.SendAsync(requestMessage);
+                    var response = await client.SendAsync(requestMessage, cancellationToken);
                     return await ProcessResponse<TResponse>(response);
                 }
-                catch (Exception ex)
+                catch (HttpRequestException ex)
                 {
                     _logger.LogError(ex, "Failed to call {0} at {1}", apiName, apiRequest.Endpoint);
                     return ApiResponse<TResponse>.Error(ex.Message);
@@ -59,7 +63,7 @@ public class HttpClientService : IHttpClientService
 
     private async Task ApplyAuthentication(HttpClient client, ApiConfig apiConfig)
     {
-        if (apiConfig.AuthConfig is null) return;
+        if (apiConfig.AuthConfig is null || apiConfig.AuthConfig.AuthType == AuthenticationType.None) return;
         var handler = _authenticationHandlers.FirstOrDefault(ah => ah.CanHandle(apiConfig.AuthConfig.AuthType));
         if (handler is null) throw new InvalidOperationException($"No Authentication handler found for {apiConfig.AuthConfig.AuthType}");
         await handler.AuthenticateAsync(client, apiConfig.AuthConfig);
@@ -81,7 +85,7 @@ public class HttpClientService : IHttpClientService
         if (!httpResponseMessage.IsSuccessStatusCode) return ApiResponse<TResponse>.Error(content, httpResponseMessage.StatusCode);
         try
         {
-            var data = JsonSerializer.Deserialize<TResponse>(content);
+            var data = JsonSerializer.Deserialize<TResponse>(content, _jsonOptions);
             return ApiResponse<TResponse>.Success(data, httpResponseMessage.StatusCode);
         }
         catch (JsonException ex)
